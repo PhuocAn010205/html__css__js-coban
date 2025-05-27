@@ -1,6 +1,14 @@
+
+
+  <title>Shopee</title>
 Logo shoppe
 --------------------
 Chào mừng bạn đến với Shopee
+
+Shopee là gì?
+Shopee là một nền tảng thương mại điện tử hàng đầu tại Đông Nam Á và Đài Loan, cung cấp dịch vụ mua sắm trực tuyến cho người tiêu dùng và doanh nghiệp.
+Nền tảng này cho phép người dùng mua sắm các sản phẩm đa dạng từ nhiều danh mục khác nhau,
+bao gồm thời trang, điện tử, đồ gia dụng, và nhiều hơn nữa.
 
 CHĂM SÓC KHÁCH HÀNG
 Trung Tâm Trợ Giúp
