@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Cafe Menu</title>
+</head>
+  <style>
+   
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    border: 2px solid red;
+    margin: 20px auto; /* Center the body */ 
+}
+
+   
+    .title{
+        padding: 20px 0;
+    }
+    h1{
+        text-align: center;
+        color: brown;
+        font-style: italic;
+        text-shadow: 10px 31px 10px rgba(246, 22, 22, 0.7);
+        padding: 20px 0;
+    }
+    .menu{
+        padding-left: 20px;
+    }
+    .menu a {
+             text-decoration: none;
+             color: none;
+    }
+    #starter h2, #desserts h2 {
+        color: brown;
+         background-color: #fffacd;
+         font-size: 30px;
+    }
+      #starter ul ,#desserts ul {
+        padding-left: 30px;
+      }
+      #desserts {
+        margin-bottom: 100px;
+      }
+     .btn{
+        color: red;
+     }
+     ul li a{
+        color: red;
+     }
+     ul li span{
+        color: darkorange;
+     }
+  </style>
+<body>
+
+    <div class="title">
+        <h1>EXAMPLE CAFE MENU</h1>
+    </div>
+     <hr>
+    <div class="menu">
+        <a href="#starter">Starter</a>
+        <a href="#main_courses">Main Courses</a>
+        <a href="#desserts">Desserts</a>
+    </div>
+<hr>
+    <div id="starter">
+        <h2>Starter</h2>
+        <ul>
+            <li>Chesnut and Mushroom Goujons <a href="#!">(v)</a></li>
+            <li>Goat Cheese<a href="#!">(v)</a></li>
+            <li><span>HONEY SOY CHICKEN KEBABS</span><a href="#!">(V)</a></li>
+            <li>Seafood Salad<a href="#!">(v)</a></li>
+        </ul>
+        <a href="#top" class="btn">Back to Top</a>
+    </div>
+    <div id="desserts">
+        <h2>Desserts</h2>
+        <ul>
+            <li>Lemon Sorbet <a href="#!">(v)</a></li>
+            <li>Chocolate Mud Pie<a href="#!">(v)</a></li>
+            <li>Pecan Pie<a href="#!">(v)</a></li>
+            <li>Selection of fine Cheeses from Around the World<a href="#!">(v)</a></li>
+        </ul>
+        <a href="#top" class="btn btn-1">Back to Top</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Cafe Menu</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin-left: 20px;
+            width: 1000px;
+            border-top: 2px solid red;
+            border-left: 2px solid pink;
+            border-bottom: 2px solid red;
+            border-right: 2px solid pink;
+        }
+
+        
+
+
+        h1 {
+            text-align: center;
+            color: brown;
+            font-style: italic;
+            text-shadow: 10px 31px 10px rgba(246, 22, 22, 0.7);
+            padding: 30px 0;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: pink;
+            border-top: 1px solid red;
+            padding: 6px 20px;
+        }
+
+        .home {
+            width: 30px;
+            height: 30px;
+            display: block;
+            text-align: top;
+            position: relative;
+            top:-10px;
+
+
+        }
+
+        .navbar__list {
+            display: flex;
+            flex-grow: 1;
+        }
+        
+        .navbar__link {
+            display: block;
+            padding: 20px 20px;
+            color: white;
+            font-size: 16px;
+            font-weight: 400; 
+        }
+        .navbar__item:nth-child(odd){
+            border-left: 1px solid blue;
+            border-right: 1px solid blue;
+        }
+        .navbar__link{
+            text-decoration: none;
+        }
+
+        .search-container{
+            display: flex;
+            align-items: center;
+            padding-left:20px ;
+        }
+        
+        .text{
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 0.9em;
+            margin-right: 5px;
+        }
+        .submit{
+            padding: 5px 10px;
+            background-color: #e0e0e0;
+            /* Light gray button */
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+
+        .submit:hover {
+            background-color: #d0d0d0;
+        }
+
+        /* Menu Section Styles (Starter, Desserts) */
+        .menu-section {
+            background-color: #fffacd;
+            /* Light yellow background */
+            padding: 20px;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            /* Separator between sections */
+
+        }
+
+         .menu{
+        padding-left: 20px;
+    }
+    .menu a {
+             text-decoration: none;
+             color: none;
+    }
+    #starter h2, #desserts h2 {
+        color: brown;
+         background-color: #fffacd;
+         font-size: 30px;
+    }
+      #starter ul ,#desserts ul {
+        padding-left: 30px;
+      }
+      #desserts {
+        margin-bottom: 100px;
+      }
+     .btn{
+        color: red;
+     }
+     ul li a{
+        color: red;
+     }
+      ul li span{
+        color: darkorange;
+     }
+    </style>
+</head>
+
+<body>
+    <h1>EXAMPLE CAFE MENU</h1>
+
+
+    <div class="container">
+        <img src="./img/icons8-home-50.png" alt="Home" class="home">
+        <div class="navbar">
+            <ul class="navbar__list">
+                <li class="navbar__item">
+                    <a href="#!" class="navbar__link">STARTER</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#!" class="navbar__link">MAIN COURSES</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#!" class="navbar__link">DESSERTS</a>
+                </li>
+            </ul>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="text">
+            <input type="submit" value="Go" class="submit">
+        </div>
+    </div>
+
+
+    <div id="starter">
+        <h2>Starter</h2>
+        <ul>
+            <li>Chesnut and Mushroom Goujons <a href="#!">(v)</a></li>
+            <li>Goat Cheese<a href="#!">(v)</a></li>
+            <li><span>HONEY SOY CHICKEN KEBABS</span><a href="#!">(V)</a></li>
+            <li>Seafood Salad<a href="#!">(v)</a></li>
+        </ul>
+        <a href="#top" class="btn">Back to Top</a>
+    </div>
+    <div id="desserts">
+        <h2>Desserts</h2>
+        <ul>
+            <li>Lemon Sorbet <a href="#!">(v)</a></li>
+            <li>Chocolate Mud Pie<a href="#!">(v)</a></li>
+            <li>Pecan Pie<a href="#!">(v)</a></li>
+            <li>Selection of fine Cheeses from Around the World<a href="#!">(v)</a></li>
+        </ul>
+        <a href="#top" class="btn btn-1">Back to Top</a>
+    </div>
+
+</body>
+
+</html>

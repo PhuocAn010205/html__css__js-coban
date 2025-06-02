@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Cafe Menu</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        body {
+            margin: 10px auto;
+            border: 2px solid #e49ca6;
+            background: #fff;
+            width: 1300px;
+        }
+
+        h1 {
+            text-align: center;
+            color: brown;
+            font-style: italic;
+            font-size: 2.5em;
+            margin: 20px 0 10px 0;
+            letter-spacing: 2px;
+            text-shadow: 10px 5px 3px #e49ca6;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            background: #e49ca6;
+            height: 40px;
+            border-bottom: 2px solid #e49ca6;
+            justify-content: center;
+        }
+
+        .home-wrapper {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0 10px 0 10px;
+        }
+
+        .home {
+            width: 24px;
+            height: 24px;
+            display: block;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar__list {
+            display: flex;
+            flex: 1;
+        }
+         .navbar__item{
+            list-style: none;
+            
+         }
+
+        .navbar__item:nth-child(odd) {
+            border-left: 1px solid blue;
+            border-right: 1px solid blue;
+        }
+
+
+        .navbar__link {
+            display: block;
+            padding: 0 30px;
+            color: #fff;
+            font-weight: bold;
+            line-height: 30px;
+            text-decoration: none;
+        }
+
+        .navbar__link:hover {
+            color: #b76e79;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            position: relative;
+            left: 60px;
+        }
+
+        .search-container input[type="text"] {
+            padding: 4px 8px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            font-size: 1em;
+            width: 170px;
+            height: 20px;
+        }
+
+        .search-container input[type="submit"] {
+            padding: 0 6px;
+            margin-left: 5px;
+
+        }
+
+        .main-content-wrapper {
+            display: flex;
+            background: #fff;
+        }
+
+        .sidebar-left {
+            width: 160px;
+            padding-top: 10px;
+        }
+
+        .sidebar-left ul {
+            list-style: none;
+        }
+
+        .sidebar-left__item {
+            width: 170px;
+
+        }
+
+        .sidebar-left__link {
+            display: block;
+            padding: 7px 0 7px 20px;
+            background: #e49ca6;
+            color: #fff;
+            border-radius: 20px;
+            font-size: 1em;
+            margin-bottom: 5px;
+            border: none;
+            box-shadow: 2px 2px 8px #f3d2d7 inset;
+            text-decoration: none;
+        }
+
+        .sidebar-left__link:hover {
+            background: #b76e79;
+        }
+
+        .sidebar-left__image {
+            width: 170px;
+            border-radius: 50%;
+            margin: 20px auto 0 auto;
+            display: block;
+            box-shadow: 4px 14px 10px #e49ca6
+        }
+
+        .main-menu-content {
+            flex-grow: 1;
+            padding: 0 30px 0 25px;
+            margin-top: 10px;
+        }
+
+
+        .menu-section h2 {
+            position: relative;
+            color: brown;
+            display: inline-block;
+            background: #e49ca6;
+            font-size: 2em;
+            font-weight: bold;
+            letter-spacing: 18px;
+            width: 430px;
+            right: -195px;
+            padding-left: 10px;
+        }
+
+        .menu-section ul {
+            padding-left: 10px;
+            margin: 6px 0 0 0;
+        }
+
+
+        .btn {
+            color: red;
+            position: relative;
+            right: 10px;
+
+        }
+
+        ul li a {
+            color: red;
+        }
+
+        .desc {
+            color: darkorange;
+        }
+
+        .highlight-item {
+            color: #e49ca6;
+            font-weight: bold;
+        }
+
+        .back-to-top {
+            color: red;
+            text-decoration: underline;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 5px;
+            font-size: 0.95em;
+        }
+
+        .back-to-top:hover {
+            color: #b76e79;
+        }
+
+        .info-form-section {
+            margin-top: 0;
+        }
+
+        .info-form-section h2 {
+            color: brown;
+            background: #e49ca6;
+            padding: 0 40px;
+            display: inline-block;
+            font-size: 1.5em;
+            font-weight: bold;
+            letter-spacing: 18px;
+            margin-bottom: 10px;
+            margin-top: 0;
+
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .form-grid input[type="text"],
+        .form-grid input[type="email"],
+        .form-grid input[type="tel"],
+        .form-grid select {
+            width: 95%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            font-size: 1em;
+        }
+
+        .radio-group {
+            grid-column: 2/3;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        textarea {
+            width: 99%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            font-size: 1em;
+            resize: vertical;
+            min-height: 60px;
+            margin-top: 5px;
+        }
+
+        .form-buttons {
+            margin-top: 5px;
+        }
+
+        .form-buttons input[type="submit"],
+        .form-buttons input[type="reset"] {
+            padding: 6px 3px;
+            font-size: 10px;
+        }
+
+        .sidebar-right {
+            width: 250px;
+            height: 500px;
+            padding: 0 10px 0 10px;
+            margin-top: 10px;
+            background: #000;
+            color: #fff;
+        }
+
+
+        .event-item {
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .event-item img {
+            width: 98%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 12px #222;
+        }
+
+        .event-item h3 {
+            color: #fff;
+            margin-bottom: 5px;
+            text-align: left;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        .event-item p {
+            color: #eee;
+            text-align: left;
+            font-size: 10px;
+            padding: 0 13px;
+
+        }
+
+        .event-item a {
+            color: #ffb6c1;
+            text-decoration: underline;
+        }
+
+        .footer {
+            background: #e49ca6;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0 10px 0;
+            margin-top: 0;
+            font-size: 1.3em;
+            font-style: italic;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <a name="top"></a>
+    <h1>EXAMPLE CAFE MENU</h1>
+    <div class="container">
+        <a href="#top" class="home-wrapper">
+            <img src="./img/icons8-home-50.png" alt="Home" class="home">
+        </a>
+        <nav class="navbar">
+            <ul class="navbar__list">
+                <li class="navbar__item">
+                    <a href="#starter" class="navbar__link">STARTER</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#main_courses" class="navbar__link">MAIN COURSES</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#desserts" class="navbar__link">DESSERTS</a>
+                </li>
+            </ul>
+            <div class="search-container">
+                <input type="text" placeholder="" value="">
+                <input type="submit" value="Go">
+            </div>
+        </nav>
+    </div>
+    <div class="main-content-wrapper">
+        <aside class="sidebar-left">
+            <ul>
+                <li class="sidebar-left__item"><a href="#" class="sidebar-left__link">Cafe Latte</a></li>
+                <li class="sidebar-left__item"><a href="#" class="sidebar-left__link">Capuchino</a></li>
+                <li class="sidebar-left__item"><a href="#" class="sidebar-left__link">Ocean Blue</a></li>
+                <li class="sidebar-left__item"><a href="#" class="sidebar-left__link">Ice-cream Cafe</a></li>
+                <li class="sidebar-left__item"><a href="#" class="sidebar-left__link">Order Online</a></li>
+            </ul>
+            <img src="./img/company.png" alt="Cafe Image" class="sidebar-left__image">
+        </aside>
+        <main class="main-menu-content">
+            <div id="starter" class="menu-section">
+                <h2>Starter</h2>
+                <ul>
+                    <li><span>Chesnut and Mushroom Goujons <a href="#!">(v)</a></li>
+                    <li>Goat Cheese<a href="#!">(v)</a></li>
+                    <li><span class="desc">HONEY SOY CHICKEN KEBABS</span><a href="#!">(V)</a></li>
+                    <li>Seafood Salad<a href="#!">(v)</a></li>
+                </ul>
+                <a href="#top" class="btn">Back to Top</a>
+            </div>
+            <div id="desserts" class="menu-section">
+                <h2>Desserts</h2>
+                <ul>
+                    <li>Lemon Sorbet <a href="#!">(v)</a></li>
+                    <li>Chocolate Mud Pie<a href="#!">(v)</a></li>
+                    <li>Pecan Pie<a href="#!">(v)</a></li>
+                    <li>Selection of fine Cheeses from Around the World<a href="#!">(v)</a></li>
+                </ul>
+                <a href="#top" class="btn btn-1">Back to Top</a>
+            </div>
+            <div id="information" class="info-form-section menu-section">
+                <h2>INFORMATION</h2>
+                <form>
+                    <div class="form-grid">
+                        <input type="text" placeholder="First Name">
+                        <input type="text" placeholder="Last Name">
+                        <input type="email" placeholder="Email">
+                        <input type="tel" placeholder="Telephone">
+                        <select class="select">
+                            <option>USA</option>
+                            <option>Vietnam</option>
+                            <option>Other</option>
+                        </select>
+                        <div class="radio-group">
+                            <label><input type="radio" name="nationality" value="vietnamese"> Vietnamese</label>
+                            <label><input type="radio" name="nationality" value="foreigner"> Foreigner</label>
+                        </div>
+                    </div>
+                    <textarea placeholder="Comment"></textarea>
+                    <div class="form-buttons">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Cancel">
+                    </div>
+                </form>
+            </div>
+        </main>
+        <aside class="sidebar-right">
+            <h2>Events</h2>
+            <div class="event-item">
+                <h3>Regular Meetings</h3>
+                <img src="./img/meeting.png" alt="Regular Meetings">
+                <p>Host your regular team meetings or activities in the comfort of your own private room. <a
+                        href="#">Read more...</a></p>
+            </div>
+            <div class="event-item">
+                <h3>Product Launches</h3>
+                <img src="./img/launch.png" alt="Product Launches">
+                <p>Launch your product with ease in a space that truly fits its image. <a href="#">Read more...</a></p>
+            </div>
+        </aside>
+    </div>
+    <footer class="footer">
+        ABC Company © - 12345678 - abccoffee@gmail.com
+    </footer>
+</body>
+
+</html>
