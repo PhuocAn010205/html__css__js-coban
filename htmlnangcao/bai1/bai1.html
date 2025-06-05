@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Our Clients Say</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            line-height: 1.6;
+        }
+
+        .clients-section {
+            padding: 60px 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            color: #ffd700;
+            margin-bottom: 50px;
+            font-weight: bold;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            align-items: start;
+        }
+
+        .testimonial-item {
+            background-color: #fff;
+            padding: 30px;
+ 
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .client-logo {
+            margin-bottom: 20px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .client-logo img {
+            max-width: 150px;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .testimonial-text {
+            font-size: 1.1em;
+            color: #555;
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            .testimonial-item {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .clients-section {
+                padding: 40px 15px;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="clients-section">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-item">
+                <div class="client-logo">
+                    <img src="./img/IBM.png" alt="IBM Logo">
+                </div>
+                <p class="testimonial-text">Sed vestibulum scelerisque urna, eu finibus leo facilisis sit amet. Proin id dignissim magna. Sed varius urna et pulvinar venenatis.</p>
+            </div>
+            <div class="testimonial-item">
+                <div class="client-logo">
+                    <img src="./img/vuong.png" alt="Microsoft Logo">
+                </div>
+                <p class="testimonial-text">Donec euismod dolor ut ultricies consequat. Vivamus urna ipsum, rhoncus molestie neque ac, mollis eleifend nibh.</p>
+            </div>
+            <div class="testimonial-item">
+                <div class="client-logo">
+                    <img src="./img/tao.png" alt="Apple Logo">
+                </div>
+                <p class="testimonial-text">In efficitur in velit et tempus. Duis nec odio dapibus, suscipit erat fringilla, imperdiet nibh. Morbi tempus auctor felis ac vehicula.</p>
+            </div>
+            <div class="testimonial-item">
+                <div class="client-logo">
+                    <img src="./img/gg.png" alt="Google Logo">
+                </div>
+                <p class="testimonial-text">Fusce pharetra erat id odio blandit, nec pharetra eros venenatis. Pellentesque porttitor cursus massa et vestibulum.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

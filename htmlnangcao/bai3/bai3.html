@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* CSS cho toàn bộ trang */
+        body {
+            font-family: Arial, sans-serif;
+            /* Font chữ cơ bản */
+            margin: 0;
+            /* Loại bỏ margin mặc định của body */
+            padding: 0;
+            /* Loại bỏ padding mặc định của body */
+            background-color: #f8f8f8;
+            /* Màu nền nhẹ cho trang */
+            line-height: 1.6;
+            /* Chiều cao dòng cho văn bản */
+        }
+
+        /* Container bao bọc toàn bộ phần comments */
+        .comments-container {
+            max-width: 800px;
+            /* Chiều rộng tối đa của khu vực comments */
+            margin: 60px auto;
+            /* Canh giữa container theo chiều ngang và tạo khoảng cách trên/dưới */
+            padding: 0 20px;
+            /* Padding hai bên để nội dung không chạm vào cạnh màn hình */
+            box-sizing: border-box;
+            /* Đảm bảo padding không làm tăng kích thước tổng thể */
+        }
+
+        /* Tiêu đề chính của phần comments */
+        .section-heading {
+            font-size: 2em;
+            /* Kích thước chữ lớn */
+            color: #333;
+            /* Màu chữ đậm */
+            margin-bottom: 40px;
+            /* Khoảng cách dưới tiêu đề */
+            text-transform: uppercase;
+            /* Chuyển thành chữ in hoa */
+            letter-spacing: 1.5px;
+            /* Khoảng cách giữa các chữ cái */
+        }
+
+        /* Mỗi item comment */
+        .comment-item {
+            background-color: #fff;
+            /* Nền trắng cho mỗi comment */
+            border: 1px solid #ddd;
+            /* Viền mỏng màu xám */
+            padding: 25px;
+            /* Padding bên trong mỗi comment */
+            margin-bottom: 20px;
+            /* Khoảng cách giữa các comment */
+            border-radius: 5px;
+            /* Góc bo tròn nhẹ */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            /* Bóng đổ nhẹ nhàng */
+            position: relative;
+            /* Để định vị icon người dùng */
+            padding-right: 80px;
+            /* Thêm padding bên phải để không bị chồng lên icon */
+        }
+
+        /* Thông tin người comment (tên, ngày, giờ) */
+
+        .comment-author {
+            font-weight: bold;
+            /* Tên người comment in đậm */
+            font-size: 1.1em;
+            /* Kích thước chữ cho tên */
+            color: #333;
+            /* Màu chữ đậm */
+            margin-right: 10px;
+            /* Khoảng cách giữa tên và ngày/giờ */
+        }
+
+        .comment-date-time {
+            font-size: 0.9em;
+            /* Kích thước chữ nhỏ hơn cho ngày/giờ */
+            color: #777;
+            /* Màu chữ xám */
+        }
+
+        /* Khung bao quanh icon người dùng */
+        .comment-icon-wrapper {
+            position: absolute;
+            /* Định vị tuyệt đối */
+            top: 60px;
+            /* Cách trên 20px */
+            right: 25px;
+            /* Cách phải 25px */
+            width: 40px;
+            /* Chiều rộng khung */
+            height: 40px;
+            /* Chiều cao khung */
+            background-color: #f0f0f0;
+            /* Màu nền của khung (màu xám nhạt) */
+            border: 1px solid #ccc;
+            /* Viền của khung */
+            display: flex;
+            /* Dùng flexbox để căn giữa icon bên trong */
+            justify-content: center;
+            /* Căn giữa icon theo chiều ngang */
+            align-items: center;
+            /* Căn giữa icon theo chiều dọc */
+        }
+
+        /* Icon người dùng bên trong khung */
+        .comment-user-icon {
+            font-size: 1.8em;
+            /* Kích thước icon */
+            color: #333;
+            /* Màu icon (màu đen như trong ảnh bạn cung cấp) */
+        }
+
+        /* Nội dung của comment */
+        .comment-content {
+            font-size: 12px;
+            color: #555;
+            line-height: 1.7;
+            width: 694px;
+        }
+
+
+        /* Responsive cho màn hình nhỏ hơn */
+        @media (max-width: 600px) {
+            .comments-container {
+                margin: 30px auto;
+                /* Giảm margin trên/dưới */
+                padding: 0 15px;
+                /* Giảm padding hai bên */
+            }
+
+            .section-heading {
+                font-size: 1.8em;
+                /* Giảm kích thước tiêu đề */
+                margin-bottom: 30px;
+            }
+
+            .comment-item {
+                padding: 20px;
+                /* Giảm padding cho comment item */
+                padding-right: 70px;
+                /* Giảm padding phải để nhường chỗ cho icon */
+            }
+
+            .comment-icon-wrapper {
+                top: 15px;
+                /* Điều chỉnh vị trí khung icon */
+                right: 15px;
+                width: 45px;
+                /* Giảm kích thước khung */
+                height: 45px;
+            }
+
+            .comment-user-icon {
+                font-size: 1.6em;
+                /* Giảm kích thước icon bên trong */
+            }
+
+            .comment-author {
+                font-size: 1em;
+            }
+
+            .comment-date-time {
+                font-size: 0.85em;
+            }
+
+            .comment-content {
+                font-size: 0.95em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="comments-container">
+        <h2 class="section-heading">COMMENTS</h2>
+
+        <div class="comment-item">
+            <div class="comment-meta">
+                <p class="comment-author">By <span style="color: greenyellow;">A Name</span></p>
+                <span class="comment-date-time">Friday, 6<sup>th</sup> April 2045 @08:15:00</span>
+            </div>
+            <div class="comment-icon-wrapper">
+                <i class="fas fa-user comment-user-icon"></i>
+            </div>
+            <p class="comment-content">This is an example of a comment made on a post. You can either edit the comment,
+                delete the comment or reply to the comment. Use this as a place to respond to the post or to share what
+                you are thinking.</p>
+        </div>
+
+        <div class="comment-item">
+            <div class="comment-meta">
+                <p class="comment-author">By <span style="color: greenyellow;">A Name</span></p>
+                <span class="comment-date-time">Friday, 6<sup>th</sup> April 2045 @08:15:00</span>
+            </div>
+            <div class="comment-icon-wrapper">
+                <i class="fas fa-user comment-user-icon"></i>
+            </div>
+            <p class="comment-content">This is an example of a comment made on a post. You can either edit the comment,
+                delete the comment or reply to the comment. Use this as a place to respond to the post or to share what
+                you are thinking.</p>
+        </div>
+
+        <div class="comment-item">
+            <div class="comment-meta">
+                <p class="comment-author">By <span style="color: greenyellow;">A Name</span></p>
+                <span class="comment-date-time">Friday, 6<sup>th</sup> April 2045 @08:15:00</span>
+            </div>
+            <div class="comment-icon-wrapper">
+                <i class="fas fa-user comment-user-icon"></i>
+            </div>
+            <p class="comment-content">This is an example of a comment made on a post. You can either edit the comment,
+                delete the comment or reply to the comment. Use this as a place to respond to the post or to share what
+                you are thinking.</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

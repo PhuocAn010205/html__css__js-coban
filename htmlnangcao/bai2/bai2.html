@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Learning System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .left-panel {
+            flex: 0 0 350px;
+            background-color: #6ed07a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .right-content {
+            flex: 1;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+        .main-heading {
+            font-size: 2.2em;
+            color: #333;
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+
+        .main-heading .highlight {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .intro-text {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .features-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .features-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .features-list ul li {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+
+        .features-list ul li .fas {
+            color: #007bff;
+            margin-right: 8px;
+            font-size: 20px;
+        }
+
+        .details-link {
+            display: inline-block;
+            background-color: #00bcd4;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .details-link:hover {
+            background-color: #00a4bd;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                flex-direction: column;
+                max-width: 700px;
+            }
+
+            .left-panel {
+                width: 100%;
+                height: 200px;
+                flex: none;
+            }
+
+            .right-content {
+                padding: 40px 30px;
+            }
+
+            .features-list {
+                justify-content: space-around;
+            }
+
+            .features-list ul {
+                min-width: 180px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .main-heading {
+                font-size: 1.8em;
+            }
+
+            .intro-text {
+                font-size: 1em;
+            }
+
+            .features-list {
+                flex-direction: column;
+            }
+
+            .features-list ul {
+                width: 100%;
+                min-width: unset;
+            }
+
+            .right-content {
+                padding: 30px 20px;
+            }
+
+            .left-panel {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <p>Học Web Chuẩn</p>
+        </div>
+        <div class="right-content">
+            <h2 class="main-heading">We are a passionate <span class="highlight">learning system</span> from London. Do beautiful and easy-to-use digital design & web development</h2>
+            <p class="intro-text">Nam dictum sem, ipsum aliquam. Etiam sit amet fringilla lacus. Pellentesque suscipit ante at ullamcorper pulvinar neque porttitor. Integer lectus. Praesent sed nisi eleifend, fermentum orci amet, iaculis libero.</p>
+
+            <div class="features-list">
+                <ul>
+                    <li><i class="fas fa-check"></i> Custom Shortcodes</li>
+                    <li><i class="fas fa-check"></i> Visual Page Builder</li>
+                    <li><i class="fas fa-check"></i> Unlimited Shortcodes</li>
+                    <li><i class="fas fa-check"></i> Responsive Theme</li>
+                    <li><i class="fas fa-check"></i> Tons of Layouts</li>
+                </ul>
+                <ul>
+                    <li><i class="fas fa-check"></i> Font Awesome Icons</li>
+                    <li><i class="fas fa-check"></i> Pre-Defined Colors</li>
+                    <li><i class="fas fa-check"></i> AJAX Transitions</li>
+                    <li><i class="fas fa-check"></i> High Quality Support</li>
+                    <li><i class="fas fa-check"></i> Unlimited Options</li>
+                </ul>
+                <ul>
+                    <li><i class="fas fa-check"></i> Shopping Layouts</li>
+                    <li><i class="fas fa-check"></i> Pre-Defined Fonts</li>
+                    <li><i class="fas fa-check"></i> Style Changers</li>
+                    <li><i class="fas fa-check"></i> Footer Styles</li>
+                    <li><i class="fas fa-check"></i> Header Styles</li>
+                </ul>
+            </div>
+
+            <a href="#" class="details-link">Learn More About Us</a>
+        </div>
+    </div>
+</body>
+</html>
