@@ -1,0 +1,263 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 0px;
+}
+
+.line-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.line {
+    width: 100%;
+    height: 100px; /* Điều chỉnh chiều cao phù hợp */
+    background-image: url('line.png'); /* Sử dụng đúng tên tệp ảnh */
+    background-repeat: repeat-x; /* Lặp lại theo chiều ngang */
+    background-size: contain; /* Hiển thị hình ảnh đúng tỷ lệ */
+    background-position: center;
+}
+
+
+
+.line img {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+.container {
+    width: 100%;
+    background-color: white;
+}
+
+/* Header */
+.header {
+    background-color: #aa4314;
+    color: rgba(0, 155, 0, 0.755) ;
+    text-align: left;
+    padding: 1px 0px ;
+    font-weight: bold;
+    font-size: 28px;
+    
+}
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: left;
+    text-shadow: -5px -5px 10px rgba(255, 255, 255, 0.99); /* Hiệu ứng bóng */
+    margin-left: 20px;
+}
+
+/* Menu */
+.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    background-color: white; 
+    font-family: 'Times New Roman', serif; 
+    margin-bottom: 0;
+    padding-bottom: 0;
+    
+}
+
+.menu li {
+    margin: 0 10px ;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 20px; /* Điều chỉnh kích thước chữ */
+    color: #98840e; /* Màu chữ vàng giống hình */
+    padding: 10px 10px;
+    display: inline-block;
+    transition: 0.3s;
+    font-weight: 300;
+    text-shadow: none;
+}
+
+.menu a:hover {
+    color: #FFA500; /* Màu chữ khi hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Hiệu ứng nền khi hover */
+    border-radius: 5px;
+}
+.menu-bar {
+    width: 100%;
+    height: 5px; /* Điều chỉnh độ dày của thanh */
+    background-color: #808080; /* Màu xám */
+}
+
+
+/* Leaf line image under menu */
+.leaf-line {
+    height: 100px;
+    background-image: url("line.png");
+    background-repeat: repeat-x;
+    background-position: left;
+}
+
+/* Main layout */
+.main-content {
+    display: flex;
+    padding: 30px 40px;
+}
+
+/* Left form */
+.left {
+    flex: 2;
+    padding-right: 30px;
+}
+
+.left h2 {
+    text-align: left; 
+    color: #aa8833;
+    font-size: 20px;
+}
+
+.values {
+    font-style: italic;
+    color: #aa6633;
+    margin-bottom: 20px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+form button {
+    background-color: #998822;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Right sidebar */
+.right {
+    flex: 1;
+    background-color: #fff5e5;
+    max-height: 800px; 
+    padding: 0px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.links ul {
+    list-style: square;
+    padding-left: 30px;
+    color: #aa4314;
+    padding-bottom: 20px;
+}
+
+.links a {
+    float:left;
+    text-decoration: none;
+    color: #aa4314;
+}
+
+.right h3 {
+    text-align: left; /* Căn chữ về phía trái */
+    letter-spacing: 2px; 
+    padding-left: 15px;
+    margin-top:auto;
+}
+
+.info {
+    width: 100%;
+    position: relative;
+    top: 30px;  
+    background-color: white; /* Đảm bảo phần này không bị ảnh hưởng bởi màu vàng */
+    padding: 20px;
+    text-align: left;
+    margin-top: 20px; /* Tạo khoảng cách với phần trên */
+    letter-spacing: 2px; 
+    word-spacing: 5px;
+}
+
+.info img {
+    width: 80px;
+    display: block;
+    float: left; /* Đẩy ảnh sang trái */
+    margin-right: 15px; /* Tạo khoảng cách với chữ */
+}
+
+.info p {
+    font-size: 14px;
+    text-align: justify;
+    color: #555;
+    width: 80%; /* Giới hạn chiều rộng để văn bản không kéo dài toàn trang */
+    margin: 0 auto; /* Căn giữa phần nội dung */
+    line-height: 1.6; /* Tăng khoảng cách giữa các dòng để dễ đọc hơn */
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    background-image: url("footer.png");
+    background-repeat: repeat-x;
+    background-position: center;
+    color: #333;
+    background-size: 15%;
+}
+.footer p {
+    font-family: Times New Roman;
+    position: relative;
+    top: 20px; /* Đẩy xuống đúng khoảng cách mong muốn */
+}
+
+.corner {
+    position: absolute;
+    width: 60px; /* Điều chỉnh kích thước nếu cần */
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+     background-size: 20%;
+}
+
+/* Góc trên trái */
+.corner1 {
+    top: 765px; /* Đẩy lên trên một chút */
+    left: 10px; /* Đẩy sang trái */
+    background-image: url("corner1.png");
+     background-size: 100%;
+}
+
+.corner2 {
+    top: 795px; /* Đẩy lên */
+    right: 1450px; /* Đẩy sang phải */
+    background-image: url("corner2.png");
+     background-size: 100%;
+}
+
+/* Góc dưới trái */
+.corner3 {
+    bottom: -100px; /* Đẩy xuống */
+    left: 1450px; /* Đẩy sang trái */
+    background-image: url("corner3.png");
+     background-size: 100%;
+}
+
+/* Góc dưới phải */
+.corner4 {
+    bottom: -120px; /* Đẩy xuống */
+    right: 8px; /* Đẩy sang phải */
+    background-image: url("corner4.png");
+     background-size: 100%;
+}
